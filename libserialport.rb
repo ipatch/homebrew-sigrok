@@ -1,5 +1,3 @@
-require 'formula'
-
 class Libserialport < Formula
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/libserialport',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
@@ -16,5 +14,4 @@ class Libserialport < Formula
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
-
 end
